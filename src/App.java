@@ -1,7 +1,14 @@
+import java.lang.ModuleLayer.Controller;
+
+import javax.swing.text.View;
+
+import controllers.BookController;
+import models.Book;
 public class App {
+    
     public static void main(String[] args) throws Exception {
 
-        Book[] books = {
+        Book[] books= {
                 new Book("Clean Code", 2008),
                 new Book("The Pragmatic Programmer", 1999),
                 new Book("Design Patterns: Elements of Reusable Object-Oriented Software", 1994),
@@ -33,6 +40,15 @@ public class App {
                 new Book("Deep Learning", 2016),
                 new Book("The Elements of Statistical Learning", 2001)
         };
+        public String mMB.showSortMethods=new Book("Python the best book", 0)
+        System.out.println(books);
+        System.out.println(mMB);
+        View view = new View();
+        BookController sortByName = new BookController();
+        BookController searchMethods = new BookController();
+        Controller controller = new Controller(view, sortByName, searchMethods);
+        controller.start();
 
     }
+
 }
